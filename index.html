@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>My Portfolio</title>
+    <link rel="icon" href="icon.png">
+    <meta charset="UTF-8">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: monospace;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 20px;
+            margin: 100px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav a {
+            color: #fff;
+            padding: 5px;
+            text-decoration: none;
+            font-size: 20px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            transform: scale(1.1);
+            color: #ce2f1d;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        section {
+            padding: 30px;
+        }
+
+        header {
+            font-family: 'Courier New', Courier, monospace;
+            background-image: linear-gradient(to bottom right, #FF512F, #DD2476);
+
+            width: 100%;
+            padding: 200px 0;
+        }
+
+        h1 {
+            font-size: 50px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 30px;
+            text-align: center;
+        }
+
+        #bio {
+            padding: 50px;
+            text-align: left;
+            font-size: 20px;
+
+        }
+
+
+        #projects ul {
+            list-style-type: none;
+        }
+
+        #projects li {
+            width: 70%;
+            padding: 15px;
+            font-size: 20px;
+        }
+
+        #projects a {
+            font-size: 25px;
+        }
+
+        #contacts {
+            font-size: 20px;
+            text-align: center;
+            background-image: linear-gradient(to bottom right, #72FFB6, #10D164);
+
+        }
+
+        #contacts .social-links {
+            margin-top: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #contacts .social-links a {
+            margin: 0 10px;
+            font-size: 2em;
+            color: #64481f;
+            transition: color 0.3s ease;
+        }
+
+        #contacts .social-links a:hover {
+            color: #7e0d0d;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+    <header>
+        <h1>
+            Muhammad Allayarov
+        </h1>
+        <h2>Backend developer</h2>
+        <nav>
+            <a href="#bio">About Me</a>
+            <a href="#projects">Projects</a>
+            <a href="#contacts">Contacts</a>
+        </nav>
+    </header>
+
+
+    <section id="bio">
+        <h2>About Me</h2>
+        <p>
+            Hi, I'm 20 yo second year student of Innopolis University, studying
+            in software development track. I have interest in backend development and DevOps. Additionally, I'm excited
+            with
+            modern web frameworks and want to try my best to become fullstack developer.
+        </p>
+        <p>Skills:</p>
+
+        <ul>
+            <li>Syntax: C/C++, Python, Java</li>
+            <li>Worked with libraries and frameworks: Django, DRF, ZeroMQ, Telebot, gRPC</li>
+            <li>Databases: PostgreSQL, MongoDB</li>
+            <li>Containerization: Docker</li>
+            <li>Documentation: Markdown</li>
+            <li>SDLC: Scrum, Kanban</li>
+            <li>VCS: Git</li>
+            <li>Other (beginner level): linux shell, nginx, docker-compose, CI/CD pipelining, frontend basics:
+                html/css/js
+            </li>
+        </ul>
+
+        <p>Studying now: Django REST Framework (DRF), FastAPI, Svelte(kit)
+        </p>
+
+        <p>Languages: English - B1/B2, Russian - C1/C2</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+            <li>
+                <b>InnoSport: Achievements</b> <a id="gh-link" href="https://github.com/muhammaduss/InnoSport"
+                    target="_blank"><i class="fa fa-github"></i></a> - role: frontend developer's assistant.
+                <p>
+                    <i>Summer Course [Software Project] 2023, UI.</i>
+                    Enhancing the ability of coaches to track student engagement and statistics by adding
+                    schedules with
+                    attendance of relevant classes.
+                <p>Stack: HTML, CSS, JavaScript</p>
+                </p>
+            </li>
+            <li>
+                <b>Wishlist Bot for Telegram</b> <a id="gh-link"
+                    href="https://github.com/muhammaduss/wishlist_telegram_bot" target="_blank"><i
+                        class="fa fa-github"></i></a>
+
+                <p>
+                    <i> Summer elective [Python] 2023, UI.</i>
+                    A bot for storing wish lists for any topic.
+                <p> Stack: Python, Telebot, SQLite3</p>
+                </p>
+            </li>
+            <li>
+                <b>CryptoClicker</b> <a id="gh-link" href="https://github.com/absorian/cryptoclicker" target="_blank"><i
+                        class="fa fa-github"></i></a> - role: DevOps
+                <p>
+                    <i>Autumn course [System and Network Administration] 2024, UI.</i>
+                    A mini-site for stimulating the accumulation of virtual currency with support for a leaderboard and
+                    with
+                    load distribution to several servers via nginx.
+                <p>Stack: Nginx, Dockerfile, Github Actions, CI/CD pipelining</p>
+                </p>
+
+            </li>
+            <li>
+                <b>IKIGAI</b> <a id="gh-link" href="https://github.com/TheAnushervon/IKIGAI" target="_blank"><i
+                        class="fa fa-github"></i></a> - role: backend developer
+                <p>
+                    <i>The prize place in the hackathon from "LETS HACK", the case from the Future Crew MTS, 2024.</i>
+                    Client portal for the study of the security of the external perimeter of the customer.
+                <p>Stack: Django, Django REST Framework</p>
+                </p>
+            </li>
+        </ul>
+    </section>
+
+    <section id="contacts">
+        <h2>Contacts</h2>
+        <p>You can reach me in Telegram from 10:00 to 23:00 any day of the week</p>
+        <div class="social-links">
+            <a id="gh-link" href="https://github.com/muhammaduss" target="_blank"><i class="fa fa-github"></i></a>
+            <a id="tg-link" href="https://t.me/muhammaduss" target="_blank"><i class="fa fa-telegram"></i></a>
+            <a id="email" href="mailto:muhammad20040130@gmail.com"><i class="fa fa-envelope"></i></a>
+        </div>
+    </section>
+
+</body>
+
+</html>

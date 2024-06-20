@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Comic</title>
+    <link rel="icon" href="icon.png">
+    <meta charset="UTF-8">
+
+    <style>
+        body {
+            text-align: center;
+            font-size: large;
+            font-family: monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="comicContainer">
+        <h2 id="comicTitle">Loading...</h2>
+        <img id="comicImage" alt="" src="#">
+        <p id="comicDate"></p>
+    </div>
+    <script>
+        const email = 'm.allayarov@innopolis.university';
+        const params = new URLSearchParams({ email: email });
+        fetch('https://fwd.innopolis.university/api/hw2?' + params.toString())
+            .then(response => response.json())
+            .then(data => {
+                const comicId = data;
+                console.log(comicId);
+
+                const url_params = new URLSearchParams({ id: comicId })
+
+                fetch('https://fwd.innopolis.university/api/comic?' + url_params.toString())
+                    .then(response => response.json())
+                    .then(data => {
+                        const content = data;
+                        console.log(content);
+
+                        document.getElementById('comicTitle').textContent = content.safe_title;
+                        document.getElementById('comicDate').textContent = 'Published at: ' + new Date(content.day, content.month, content.year).toLocaleDateString();
+                        document.getElementById('comicImage').src = content.img;
+                        document.getElementById('comicImage').alt = content.alt;
+                    })
+            });
+    </script>
+</body>
+
+</html>

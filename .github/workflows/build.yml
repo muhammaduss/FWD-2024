@@ -17,6 +17,13 @@ jobs:
           npm ci
           npm run build
 
+      - name: Copy necessary static files
+        run: |
+          mkdir -p dist
+          cp index.html dist
+          cp comic.html dist
+          cp icon.png dist
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:

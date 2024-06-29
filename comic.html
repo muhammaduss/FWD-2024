@@ -21,30 +21,7 @@
         <img id="comicImage" alt="" src="#">
         <p id="comicDate"></p>
     </div>
-    <script>
-        const email = 'm.allayarov@innopolis.university';
-        const params = new URLSearchParams({ email: email });
-        fetch('https://fwd.innopolis.university/api/hw2?' + params.toString())
-            .then(response => response.json())
-            .then(data => {
-                const comicId = data;
-                console.log(comicId);
-
-                const url_params = new URLSearchParams({ id: comicId })
-
-                fetch('https://fwd.innopolis.university/api/comic?' + url_params.toString())
-                    .then(response => response.json())
-                    .then(data => {
-                        const content = data;
-                        console.log(content);
-
-                        document.getElementById('comicTitle').textContent = content.safe_title;
-                        document.getElementById('comicDate').textContent = 'Published at: ' + new Date(content.day, content.month, content.year).toLocaleDateString();
-                        document.getElementById('comicImage').src = content.img;
-                        document.getElementById('comicImage').alt = content.alt;
-                    })
-            });
-    </script>
+    <script src="/dist/bundle.js"></script>
 </body>
 
 </html>

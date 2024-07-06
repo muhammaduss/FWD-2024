@@ -25,12 +25,12 @@ jobs:
         run: |
           npm ci --force
           npm run lint
-          npm run build
+          npm run dev
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: .
 
       - name: Publish to GitHub Pages
         id: deployment

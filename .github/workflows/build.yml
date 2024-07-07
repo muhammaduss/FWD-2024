@@ -25,6 +25,7 @@ jobs:
         run: |
           npm ci
           npm run lint
+          prettier --write .
           npm run build
 
       - name: Upload artifact

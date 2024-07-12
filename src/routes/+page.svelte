@@ -41,6 +41,15 @@
 	let languages: string[] = [`English - B1/B2`, `Russian - A1/A2`];
 </script>
 
+<svelte:head>
+	<title>Comic</title>
+	<!-- In addition to tags in +layout.svelte which show on each page, we can add tags for comic data for SEO to this page.
+	Since comic already rendered in server side, we can easily acces it and show tags in HTML -->
+	<meta name="title" content={comicData.safe_title} />
+	<meta name="description" content={comicData.alt} />
+	<meta name="image" content={comicData.img} />
+</svelte:head>
+
 <main>
 	<h1>Muhammad Allayarov | Backend Developer</h1>
 	<Bio {description} {skills} {studyingNow} {languages} />

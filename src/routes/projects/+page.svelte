@@ -38,6 +38,11 @@
 	];
 </script>
 
+<svelte:head>
+	<title>Projects</title>
+	<meta name="description" content="Muhammad Allayarov's projects" />
+</svelte:head>
+
 <main>
 	<Projects {project} />
 </main>

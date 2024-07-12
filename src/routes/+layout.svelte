@@ -9,6 +9,12 @@
 	let mailto: string = `mailto:muhammad20040130@gmail.com`;
 </script>
 
+<svelte:head>
+	<title>Author</title>
+	<meta name="author" content="Muhammad Allayarov" />
+	<meta name="description" content="Muhammad Allayarov's portfolio website" />
+</svelte:head>
+
 <header>
 	<nav>
 		<a href="{base}/">Home</a>

@@ -4,7 +4,7 @@ import relativeTime from 'dayjs/plugin/relativeTime';
 dayjs.extend(relativeTime);
 
 /** @type {import('./$types').PageLoad} */
-export const load = async ({}) => {
+export const load = async () => {
 	const email = 'm.allayarov@innopolis.university';
 
 	try {

@@ -3,6 +3,14 @@
 	import Comic from '.././lib/Comic.svelte';
 	import 'font-awesome/css/font-awesome.min.css';
 
+	// Using SSR (defined in +page.js)
+	// It allows to see comic without loading it on client side
+	export let data;
+
+	export let comicData = data.props?.comicData;
+	export let comicDate = data.props?.comicDate;
+	export let relative_time = data.props?.relativeTime;
+
 	let showComic = false;
 
 	const toggleComic = () => {
@@ -43,6 +51,6 @@
 		>
 	</div>
 	{#if showComic}
-		<Comic email="m.allayarov@innopolis.university" />
+		<Comic {comicData} {comicDate} {relative_time} />
 	{/if}
 </main>
